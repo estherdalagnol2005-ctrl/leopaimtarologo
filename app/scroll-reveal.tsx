@@ -3,8 +3,6 @@
 import { useEffect } from "react";
 
 const revealSelectors = [
-  ".hero-copy > *",
-  ".hero-visual",
   ".marquee",
   ".section-kicker",
   ".services-intro > *",
