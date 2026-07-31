@@ -131,9 +131,11 @@ svg {
 
 .hero {
   align-items: end;
-  background: #050505;
+  background:
+    radial-gradient(circle at 18% 88%, rgba(153, 14, 20, .17), transparent 36%),
+    linear-gradient(118deg, #1b080a 0%, #100708 42%, #060505 78%);
   display: grid;
-  grid-template-columns: minmax(0, .88fr) minmax(460px, 1.12fr);
+  grid-template-columns: minmax(0, .82fr) minmax(480px, 1.18fr);
   min-height: 100svh;
   overflow: hidden;
   padding: 112px clamp(24px, 6vw, 96px) 32px;
@@ -240,6 +242,7 @@ h1 em {
 
 .hero-visual { align-self: end; height: min(79svh, 820px); justify-self: end; max-width: 760px; position: relative; width: 92%; z-index: 1; }
 .photo-frame {
+  box-shadow: -55px 22px 110px rgba(107, 9, 14, .2);
   clip-path: polygon(8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%, 0 8%);
   height: 100%;
   overflow: hidden;
@@ -256,8 +259,8 @@ h1 em {
 .photo-frame img { animation: hero-image-drift 16s ease-in-out infinite alternate; height: 100%; object-fit: cover; object-position: 37% 18%; transform: scale(1.012); width: 100%; }
 .photo-vignette {
   background:
-    linear-gradient(90deg, rgba(5, 5, 5, .72) 0%, transparent 28%),
-    linear-gradient(0deg, rgba(5, 5, 5, .68), transparent 35%),
+    linear-gradient(90deg, rgba(20, 7, 8, .62) 0%, transparent 24%),
+    linear-gradient(0deg, rgba(10, 5, 5, .62), transparent 34%),
     linear-gradient(180deg, rgba(5, 5, 5, .22), transparent 24%);
   inset: 0;
   position: absolute;
