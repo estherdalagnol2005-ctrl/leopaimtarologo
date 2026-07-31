@@ -1,6 +1,7 @@
 import ServicesCarousel from "./services-carousel";
 import ProcessTimeline from "./process-timeline";
 import ScrollReveal from "./scroll-reveal";
+import MobileMenu from "./mobile-menu";
 
 const whatsappUrl =
   "https://api.whatsapp.com/message/SVUCDDB7LGHPP1?autoload=1&app_absent=0&utm_source=ig";
@@ -104,15 +105,7 @@ export default function Home() {
           Agendar consulta <ArrowIcon />
         </a>
 
-        <details className="mobile-menu">
-          <summary aria-label="Abrir menu"><span /><span /></summary>
-          <nav aria-label="Navegação mobile">
-            <a href="#servicos">Serviços</a>
-            <a href="#sobre">Minha história</a>
-            <a href="#atendimento">Atendimento</a>
-            <a href={instagramUrl} target="_blank" rel="noreferrer">Instagram</a>
-          </nav>
-        </details>
+        <MobileMenu whatsappUrl={whatsappUrl} instagramUrl={instagramUrl} />
       </header>
 
       <section className="hero" id="inicio">
@@ -136,7 +129,7 @@ export default function Home() {
           <div className="photo-frame">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/leo-paim-hero-v2.jpg"
+              src="/leo-paim-hero-v3.webp"
               alt="Léo Paim durante um momento de conexão espiritual"
             />
             <span className="photo-vignette" aria-hidden="true" />
