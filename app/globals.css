@@ -663,10 +663,10 @@ footer > p { color: #776961; font-size: 8px; letter-spacing: .22em; margin: 0; t
     border: 0;
     color: inherit;
     cursor: pointer;
-    height: 38px;
+    height: 34px;
     padding: 0;
     position: relative;
-    width: 38px;
+    width: 34px;
     z-index: 23;
   }
   .menu-toggle span {
@@ -675,12 +675,12 @@ footer > p { color: #776961; font-size: 8px; letter-spacing: .22em; margin: 0; t
     position: absolute;
     right: 0;
     transition: top .35s ease, transform .35s ease, width .35s ease;
-    width: 30px;
+    width: 26px;
   }
-  .menu-toggle span:first-child { top: 12px; }
-  .menu-toggle span:last-child { top: 24px; width: 21px; }
-  .mobile-menu.is-open .menu-toggle span:first-child { top: 19px; transform: rotate(45deg); }
-  .mobile-menu.is-open .menu-toggle span:last-child { top: 19px; transform: rotate(-45deg); width: 30px; }
+  .menu-toggle span:first-child { top: 10px; }
+  .menu-toggle span:last-child { top: 21px; width: 18px; }
+  .mobile-menu.is-open .menu-toggle span:first-child { top: 17px; transform: rotate(45deg); }
+  .mobile-menu.is-open .menu-toggle span:last-child { top: 17px; transform: rotate(-45deg); width: 26px; }
   .menu-overlay {
     align-items: center;
     background:
@@ -693,7 +693,7 @@ footer > p { color: #776961; font-size: 8px; letter-spacing: .22em; margin: 0; t
     opacity: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 116px clamp(24px, 7vw, 72px) 38px;
+    padding: 112px clamp(30px, 7vw, 72px) 40px;
     pointer-events: none;
     position: fixed;
     transform: translateY(-18px);
@@ -719,28 +719,28 @@ footer > p { color: #776961; font-size: 8px; letter-spacing: .22em; margin: 0; t
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 680px;
-    min-height: min(590px, calc(100svh - 154px));
+    max-width: 560px;
+    min-height: min(535px, calc(100svh - 152px));
     position: relative;
     width: 100%;
     z-index: 1;
   }
   .menu-kicker {
     color: var(--gold);
-    font-size: 9px;
-    letter-spacing: .3em;
-    margin: 0 0 clamp(30px, 7vh, 62px);
+    font-size: 8px;
+    letter-spacing: .34em;
+    margin: 0 0 clamp(24px, 5vh, 42px);
     text-transform: uppercase;
   }
   .menu-links { display: flex; flex-direction: column; }
   .menu-links a {
     border-bottom: 1px solid rgba(203, 165, 92, .18);
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(38px, 8.3vw, 68px);
+    font-size: clamp(31px, 5.5vw, 46px);
     font-weight: 400;
-    letter-spacing: -.035em;
-    line-height: 1;
-    padding: clamp(14px, 2.4vh, 24px) 0;
+    letter-spacing: -.02em;
+    line-height: 1.12;
+    padding: clamp(12px, 1.8vh, 18px) 0;
     transition: color .25s ease, padding-left .3s ease;
   }
   .menu-links a:first-child { border-top: 1px solid rgba(203, 165, 92, .18); }
@@ -749,29 +749,30 @@ footer > p { color: #776961; font-size: 8px; letter-spacing: .22em; margin: 0; t
   .menu-footer {
     align-items: flex-end;
     display: flex;
-    gap: 22px;
+    gap: 18px;
     justify-content: space-between;
     margin-top: auto;
-    padding-top: 34px;
+    padding-top: 28px;
   }
   .menu-book {
     align-items: center;
-    background: var(--red);
+    background: rgba(133, 8, 13, .16);
+    border: 1px solid rgba(203, 165, 92, .34);
     display: flex;
-    font-size: 10px;
-    gap: 24px;
+    font-size: 8px;
+    gap: 20px;
     justify-content: space-between;
-    letter-spacing: .16em;
-    min-width: min(100%, 310px);
-    padding: 18px 20px;
+    letter-spacing: .18em;
+    min-width: min(100%, 270px);
+    padding: 15px 18px;
     text-transform: uppercase;
   }
   .menu-book span { color: var(--gold-soft); font-size: 20px; line-height: .6; }
   .menu-instagram {
     border-bottom: 1px solid rgba(203, 165, 92, .45);
     color: var(--gold-soft);
-    font-size: 10px;
-    letter-spacing: .12em;
+    font-size: 8px;
+    letter-spacing: .15em;
     padding-bottom: 7px;
     text-transform: uppercase;
   }
@@ -799,13 +800,13 @@ footer > p { color: #776961; font-size: 8px; letter-spacing: .22em; margin: 0; t
   .brand, .menu-toggle { filter: drop-shadow(0 2px 8px rgba(0, 0, 0, .75)); }
   .brand strong { font-size: 15px; }
   .brand small { font-size: 7px; }
-  .menu-overlay { padding: 105px 32px 28px; }
-  .menu-overlay::before { inset: 82px 12px 12px; }
-  .menu-overlay nav { min-height: calc(100svh - 133px); }
-  .menu-kicker { margin-bottom: 24px; }
-  .menu-links a { font-size: clamp(37px, 11vw, 52px); padding: 16px 0; }
-  .menu-footer { align-items: stretch; flex-direction: column; gap: 20px; padding-top: 28px; }
-  .menu-book { min-width: 100%; }
+  .menu-overlay { padding: 102px 34px 28px; }
+  .menu-overlay::before { inset: 80px 14px 14px; }
+  .menu-overlay nav { min-height: calc(100svh - 130px); }
+  .menu-kicker { margin-bottom: 20px; }
+  .menu-links a { font-size: clamp(28px, 8.2vw, 34px); padding: 14px 0; }
+  .menu-footer { align-items: flex-start; flex-direction: column; gap: 18px; padding-top: 26px; }
+  .menu-book { min-width: 0; width: min(100%, 280px); }
   .menu-instagram { align-self: flex-start; }
   .hero {
     align-items: center;
