@@ -168,11 +168,11 @@ export default function Home() {
         <ServicesCarousel services={services} whatsappUrl={whatsappUrl} />
       </section>
 
-      <section className="special-works" id="trabalhos-especiais">
+      <section className="special-works" id="trabalhos-especiais" aria-labelledby="titulo-trabalhos-especiais">
         <div className="special-works-shell">
           <header className="special-works-heading">
             <p className="eyebrow"><span /> Trabalhos especiais <span /></p>
-            <h2>Cuidados para intenções <em>especiais.</em></h2>
+            <h2 id="titulo-trabalhos-especiais">Cuidados para intenções <em>especiais.</em></h2>
             <p>
               Trabalhos conduzidos com responsabilidade, respeito e atenção ao seu
               momento. Fale comigo para entender qual caminho conversa com a sua intenção.
