@@ -91,7 +91,7 @@ svg {
   text-transform: uppercase;
 }
 
-.desktop-nav { display: flex; gap: clamp(22px, 3vw, 48px); }
+.desktop-nav { display: flex; gap: clamp(18px, 2.2vw, 34px); }
 .desktop-nav a {
   color: #d4c6bb;
   font-size: 11px;
