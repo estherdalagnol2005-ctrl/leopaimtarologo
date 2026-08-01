@@ -1497,3 +1497,48 @@ footer > p { color: #776961; font-size: 8px; letter-spacing: .22em; margin: 0; t
     display: none;
   }
 }
+
+
+/* Ajuste sutil do reflexo dourado no mobile */
+@media (max-width: 720px) {
+  .special-work::before {
+    animation-duration: 8.8s;
+    animation-name: special-card-shine-mobile-subtle;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(232, 199, 124, .018) 24%,
+      rgba(255, 239, 190, .075) 46%,
+      rgba(255, 243, 205, .12) 50%,
+      rgba(255, 239, 190, .075) 54%,
+      rgba(232, 199, 124, .018) 76%,
+      transparent 100%
+    );
+    box-shadow: 0 0 22px rgba(232, 199, 124, .055);
+    height: 124%;
+    left: -34%;
+    top: -12%;
+    width: 21%;
+  }
+}
+
+@keyframes special-card-shine-mobile-subtle {
+  0%, 18% {
+    opacity: 0;
+    transform: translateX(0) skewX(-15deg);
+  }
+  28% {
+    opacity: .22;
+  }
+  46% {
+    opacity: .55;
+  }
+  68% {
+    opacity: .2;
+    transform: translateX(650%) skewX(-15deg);
+  }
+  78%, 100% {
+    opacity: 0;
+    transform: translateX(650%) skewX(-15deg);
+  }
+}
