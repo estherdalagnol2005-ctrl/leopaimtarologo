@@ -1439,3 +1439,61 @@ footer > p { color: #776961; font-size: 8px; letter-spacing: .22em; margin: 0; t
     display: none;
   }
 }
+
+
+/* Brilho dourado mais visível nos trabalhos especiais no mobile */
+@media (max-width: 720px) {
+  .special-work > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .special-work::before {
+    animation-duration: 6.2s;
+    animation-name: special-card-shine-mobile;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(232, 199, 124, .035) 18%,
+      rgba(255, 235, 174, .18) 45%,
+      rgba(255, 242, 198, .3) 50%,
+      rgba(255, 235, 174, .18) 55%,
+      rgba(232, 199, 124, .035) 82%,
+      transparent 100%
+    );
+    box-shadow: 0 0 34px rgba(232, 199, 124, .14);
+    height: 132%;
+    left: -52%;
+    mix-blend-mode: screen;
+    top: -16%;
+    width: 34%;
+    z-index: 1;
+  }
+}
+
+@keyframes special-card-shine-mobile {
+  0%, 10% {
+    opacity: 0;
+    transform: translateX(0) skewX(-16deg);
+  }
+  20% {
+    opacity: .38;
+  }
+  42% {
+    opacity: 1;
+  }
+  68% {
+    opacity: .52;
+    transform: translateX(520%) skewX(-16deg);
+  }
+  78%, 100% {
+    opacity: 0;
+    transform: translateX(520%) skewX(-16deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) and (max-width: 720px) {
+  .special-work::before {
+    display: none;
+  }
+}
