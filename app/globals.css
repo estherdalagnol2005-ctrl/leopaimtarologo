@@ -1136,3 +1136,65 @@ footer > p { color: #776961; font-size: 8px; letter-spacing: .22em; margin: 0; t
     margin: 16px 0 28px;
   }
 }
+
+
+/* Centralização e profundidade das cartas no celular */
+@media (max-width: 720px) {
+  .tarot-stage {
+    perspective: 1100px;
+    perspective-origin: center;
+  }
+
+  .tarot-track {
+    --tarot-card-mobile-width: min(80vw, 310px);
+    gap: 18px;
+    padding-bottom: 44px;
+    padding-left: max(24px, calc((100vw - var(--tarot-card-mobile-width)) / 2));
+    padding-right: max(24px, calc((100vw - var(--tarot-card-mobile-width)) / 2));
+    padding-top: 28px;
+    scroll-padding-inline: max(24px, calc((100vw - var(--tarot-card-mobile-width)) / 2));
+    transform-style: preserve-3d;
+  }
+
+  .tarot-card {
+    flex-basis: var(--tarot-card-mobile-width);
+    opacity: .78;
+    scroll-snap-align: center;
+    transform: translateZ(-32px) scale(.965);
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transition:
+      border-color .48s ease,
+      box-shadow .48s ease,
+      opacity .48s ease,
+      transform .55s cubic-bezier(.2, .72, .24, 1);
+  }
+
+  .tarot-card:hover {
+    transform: translateZ(-32px) scale(.965);
+  }
+
+  .tarot-card.is-active,
+  .tarot-card.is-active:hover {
+    border-color: rgba(226, 194, 126, .9);
+    box-shadow:
+      0 34px 74px rgba(0, 0, 0, .52),
+      0 0 30px rgba(133, 8, 13, .18);
+    opacity: 1;
+    transform: translateZ(24px) scale(1.012);
+    z-index: 3;
+  }
+}
+
+@media (max-width: 370px) {
+  .tarot-track {
+    --tarot-card-mobile-width: min(79vw, 286px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) and (max-width: 720px) {
+  .tarot-card,
+  .tarot-card.is-active {
+    transition: none;
+  }
+}
