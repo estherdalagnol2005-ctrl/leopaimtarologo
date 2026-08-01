@@ -101,6 +101,7 @@ export default function Home() {
 
         <nav className="desktop-nav" aria-label="Navegação principal">
           <a href="#servicos">Serviços</a>
+          <a href="#trabalhos-especiais">Trabalhos especiais</a>
           <a href="#sobre">Minha história</a>
           <a href="#atendimento">Atendimento</a>
         </nav>
