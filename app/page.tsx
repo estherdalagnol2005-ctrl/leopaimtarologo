@@ -168,6 +168,73 @@ export default function Home() {
         <ServicesCarousel services={services} whatsappUrl={whatsappUrl} />
       </section>
 
+      <section className="special-works" id="trabalhos-especiais">
+        <div className="special-works-shell">
+          <header className="special-works-heading">
+            <p className="eyebrow"><span /> Trabalhos especiais <span /></p>
+            <h2>Cuidados para intenções <em>especiais.</em></h2>
+            <p>
+              Trabalhos conduzidos com responsabilidade, respeito e atenção ao seu
+              momento. Fale comigo para entender qual caminho conversa com a sua intenção.
+            </p>
+          </header>
+
+          <div className="special-works-grid">
+            <article className="special-work">
+              <span className="special-work-symbol" aria-hidden="true">✧</span>
+              <p className="special-work-label">Harmonização afetiva</p>
+              <h3>Adoçamento Amoroso</h3>
+              <p>
+                Um trabalho voltado a suavizar as energias da relação, favorecer
+                o diálogo e fortalecer a harmonia entre o casal.
+              </p>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                Consultar este trabalho <ArrowIcon />
+              </a>
+            </article>
+
+            <article className="special-work">
+              <span className="special-work-symbol" aria-hidden="true">☼</span>
+              <p className="special-work-label">Movimento e possibilidades</p>
+              <h3>Abertura de Caminhos</h3>
+              <p>
+                Um trabalho espiritual para movimentar energias estagnadas,
+                fortalecer possibilidades e apoiar novos ciclos.
+              </p>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                Consultar este trabalho <ArrowIcon />
+              </a>
+            </article>
+
+            <article className="special-work special-work-collective">
+              <span className="special-work-symbol" aria-hidden="true">✦</span>
+              <p className="special-work-label">Datas e propósitos especiais</p>
+              <h3>Trabalhos Coletivos</h3>
+              <p>
+                Trabalhos realizados em datas específicas, reunindo pessoas em
+                torno de uma mesma intenção espiritual.
+              </p>
+              <a href={instagramUrl} target="_blank" rel="noreferrer">
+                Ver quais estão abertos <ArrowIcon />
+              </a>
+            </article>
+
+            <article className="special-work">
+              <span className="special-work-symbol" aria-hidden="true">☾</span>
+              <p className="special-work-label">Panorama dos próximos ciclos</p>
+              <h3>Tiragem Anual</h3>
+              <p>
+                Uma leitura completa das energias e tendências dos próximos
+                doze meses, com orientações para cada etapa do ano.
+              </p>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                Consultar este trabalho <ArrowIcon />
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section className="about section" id="sobre">
         <div className="about-heading">
           <p className="eyebrow"><span /> Minha história <span /></p>
