@@ -40,18 +40,21 @@ export default function ServicesCarousel({ services, whatsappUrl }: ServicesCaro
     const cards = Array.from(track.querySelectorAll<HTMLElement>(".tarot-card"));
     if (!cards.length) return;
 
-    const trackLeft = track.getBoundingClientRect().left;
+    const trackRect = track.getBoundingClientRect();
+    const trackCenter = trackRect.left + trackRect.width / 2;
     const closest = cards.reduce(
       (best, card, index) => {
-        const distance = Math.abs(card.getBoundingClientRect().left - trackLeft);
+        const cardRect = card.getBoundingClientRect();
+        const cardCenter = cardRect.left + cardRect.width / 2;
+        const distance = Math.abs(cardCenter - trackCenter);
         return distance < best.distance ? { index, distance } : best;
       },
       { index: 0, distance: Number.POSITIVE_INFINITY },
     );
 
     setActive(closest.index);
-    setCanPrev(track.scrollLeft > 8);
-    setCanNext(track.scrollLeft + track.clientWidth < track.scrollWidth - 8);
+    setCanPrev(closest.index > 0);
+    setCanNext(closest.index < cards.length - 1);
   }, []);
 
   useEffect(() => {
@@ -78,9 +81,14 @@ export default function ServicesCarousel({ services, whatsappUrl }: ServicesCaro
   const move = (direction: 1 | -1) => {
     const track = trackRef.current;
     if (!track) return;
-    const card = track.querySelector<HTMLElement>(".tarot-card");
-    const gap = 24;
-    track.scrollBy({ left: direction * ((card?.offsetWidth ?? 300) + gap), behavior: "smooth" });
+
+    const cards = Array.from(track.querySelectorAll<HTMLElement>(".tarot-card"));
+    const nextIndex = Math.max(0, Math.min(cards.length - 1, active + direction));
+    const card = cards[nextIndex];
+    if (!card) return;
+
+    const centeredLeft = card.offsetLeft - (track.clientWidth - card.offsetWidth) / 2;
+    track.scrollTo({ left: centeredLeft, behavior: "smooth" });
   };
 
   return (
@@ -89,8 +97,9 @@ export default function ServicesCarousel({ services, whatsappUrl }: ServicesCaro
         <div className="tarot-track" ref={trackRef} aria-label="Serviços em formato de cartas de tarô">
           {services.map((service, index) => (
             <article
-              className={`tarot-card tarot-tone-${(index % 3) + 1}`}
+              className={`tarot-card tarot-tone-${(index % 3) + 1}${index === active ? " is-active" : ""}`}
               id={`servico-${index + 1}`}
+              aria-current={index === active ? "true" : undefined}
               key={service.title}
             >
               <div className="tarot-border">
