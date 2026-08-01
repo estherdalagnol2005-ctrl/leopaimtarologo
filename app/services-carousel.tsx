@@ -87,7 +87,13 @@ export default function ServicesCarousel({ services, whatsappUrl }: ServicesCaro
     const card = cards[nextIndex];
     if (!card) return;
 
-    const centeredLeft = card.offsetLeft - (track.clientWidth - card.offsetWidth) / 2;
+    const trackRect = track.getBoundingClientRect();
+    const cardRect = card.getBoundingClientRect();
+    const centeredLeft =
+      track.scrollLeft +
+      (cardRect.left - trackRect.left) -
+      (track.clientWidth - cardRect.width) / 2;
+
     track.scrollTo({ left: centeredLeft, behavior: "smooth" });
   };
 
