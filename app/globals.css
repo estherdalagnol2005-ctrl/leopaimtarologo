@@ -1542,3 +1542,48 @@ footer > p { color: #776961; font-size: 8px; letter-spacing: .22em; margin: 0; t
     transform: translateX(650%) skewX(-15deg);
   }
 }
+
+
+/* Intensidade intermediária do reflexo dourado no mobile */
+@media (max-width: 720px) {
+  .special-work::before {
+    animation-duration: 7.4s;
+    animation-name: special-card-shine-mobile-balanced;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(232, 199, 124, .028) 20%,
+      rgba(255, 237, 181, .12) 43%,
+      rgba(255, 245, 207, .19) 50%,
+      rgba(255, 237, 181, .12) 57%,
+      rgba(232, 199, 124, .028) 80%,
+      transparent 100%
+    );
+    box-shadow: 0 0 28px rgba(232, 199, 124, .1);
+    height: 128%;
+    left: -42%;
+    top: -14%;
+    width: 27%;
+  }
+}
+
+@keyframes special-card-shine-mobile-balanced {
+  0%, 14% {
+    opacity: 0;
+    transform: translateX(0) skewX(-15deg);
+  }
+  24% {
+    opacity: .32;
+  }
+  45% {
+    opacity: .8;
+  }
+  68% {
+    opacity: .3;
+    transform: translateX(560%) skewX(-15deg);
+  }
+  80%, 100% {
+    opacity: 0;
+    transform: translateX(560%) skewX(-15deg);
+  }
+}
