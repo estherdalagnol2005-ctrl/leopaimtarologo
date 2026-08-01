@@ -7,6 +7,8 @@ const revealSelectors = [
   ".section-kicker",
   ".services-intro > *",
   ".tarot-carousel",
+  ".special-works-heading > *",
+  ".special-work",
   ".about-heading > *",
   ".about-feature > *",
   ".process-header > *",
