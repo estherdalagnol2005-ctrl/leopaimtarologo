@@ -257,7 +257,7 @@ export default function Home() {
 
           <div className="about-copy">
             <p className="lead">
-              Meu nome é <strong>Léo Paim</strong>. Sou tarólogo há 5 anos,
+              Meu nome é <strong>Léo Paim</strong>. Sou tarólogo há 7 anos,
               cartomante e terapeuta holístico. Minha conexão com a
               espiritualidade começou aos sete anos e cresceu comigo. Guiado
               pelas minhas raízes e por diferentes caminhos de fé, encontrei
