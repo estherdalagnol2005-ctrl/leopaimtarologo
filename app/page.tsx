@@ -11,9 +11,19 @@ const instagramUrl =
 
 const services = [
   {
+    title: "Baralho Cigano",
+    category: "Orientação e caminhos",
+    text: "Uma leitura direta para esclarecer o seu momento, revelar possibilidades e orientar decisões com mais segurança.",
+  },
+  {
     title: "Vidas Passadas",
     category: "Tiragem de baralho",
-    text: "Uma leitura para trazer à consciência aprendizados, padrões, medos e questões de outras trajetórias que podem estar refletindo na sua vida atual.",
+    text: "Uma leitura para compreender aprendizados e padrões de outras trajetórias que podem estar refletindo na sua vida atual.",
+  },
+  {
+    title: "Tarô",
+    category: "Orientação e autoconhecimento",
+    text: "Uma leitura simbólica para compreender desafios, tendências e caminhos, trazendo clareza para as suas escolhas.",
   },
   {
     title: "Energia do Amor",
@@ -49,12 +59,6 @@ const services = [
     title: "Acordos Espirituais",
     category: "Tiragem de baralho",
     text: "Um oráculo de autoconhecimento para investigar simbolicamente acordos, ciclos e padrões que acompanham sua trajetória espiritual.",
-  },
-  {
-    title: "Força de Maria Padilha",
-    category: "Jogo de cartas",
-    text: "Uma leitura objetiva para questões específicas ou uma análise completa, conduzida com firmeza, respeito e responsabilidade.",
-    note: "Jogo completo • Perguntas diretas • Consulta pontual",
   },
 ];
 
