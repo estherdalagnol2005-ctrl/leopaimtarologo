@@ -45,6 +45,7 @@ export default function MobileMenu({ whatsappUrl, instagramUrl }: MobileMenuProp
           <p className="menu-kicker">Navegação</p>
           <div className="menu-links">
             <a href="#servicos" onClick={closeMenu}>Serviços</a>
+            <a href="#trabalhos-especiais" onClick={closeMenu}>Trabalhos especiais</a>
             <a href="#sobre" onClick={closeMenu}>Minha história</a>
             <a href="#atendimento" onClick={closeMenu}>Atendimento</a>
           </div>
